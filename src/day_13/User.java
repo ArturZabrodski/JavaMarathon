@@ -23,7 +23,11 @@ public class User {
 
     // подписываем пользователя на пользователя user
     public void subscribe(User user) {
-        this.subscriptions.add(user);
+        if (this != user){
+            this.subscriptions.add(user);
+        } else {
+            System.out.println("Вы не можете подписаться на самого себя");
+        }
     }
 
     // возвращает True, если пользователь подписан на пользователя user и False, если не подписан.

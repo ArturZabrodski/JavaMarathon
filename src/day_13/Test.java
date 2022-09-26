@@ -48,5 +48,21 @@ public class Test {
         System.out.println();
 
         MessageDatabase.showDialog(user1, user2);
+
+
+        user1.subscribe(user3);  // подписка user1 на user3
+        user1.subscribe(user1);  // попытка подписки user1 на user1
+
+        System.out.println(user1.getSubscriptions());  // [User3]
+
+        System.out.println(user1.isSubscribed(user2)); // false
+        System.out.println(user1.isSubscribed(user3)); // true
+
+        user3.subscribe(user1);  // подписка user3 на user1
+        System.out.println(user3.getSubscriptions());  // [User2]
+
+        System.out.println(user3.isFriend(user1)); // true, т.к. друзья
+        System.out.println(user1.isFriend(user3)); // true, т.к. друзья
+        System.out.println(user3.isFriend(user2)); // false
     }
 }
