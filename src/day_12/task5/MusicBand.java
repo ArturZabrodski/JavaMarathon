@@ -48,23 +48,19 @@ public class MusicBand {
     }
 
     public static void transferMembers(MusicBand musicBand1, MusicBand musicBand2) {
-        for (int i = 0; i < musicBand1.members.size(); i++) {
-            musicBand2.getMembers().add(musicBand1.members.get(i));
+        for (int i = 0; i < musicBand1.members.size(); i++) { // идем от нулевого элемента до последнего
+            musicBand2.getMembers().add(musicBand1.members.get(i)); // добавляем
         }
-        musicBand1.members.clear();
+        musicBand1.members.clear(); // после всех добавлений очищаем список
     }
 
     public void printMembers() {
-        System.out.println("Musicband: " + this.name);
-        System.out.println(members);
+        System.out.println("Musicband: " + this.name + "Members: " + members);
     }
 
     @Override
     public String toString() {
-        return "\nMusicBand{" +
-                "name='" + name + '\'' +
-                ", year=" + year +
-                ", members=" + members +
-                '}';
+        return "\nMusicBand{" + name + ", "
+                + year + ", Members: " + members + '}';
     }
 }

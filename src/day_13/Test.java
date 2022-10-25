@@ -28,38 +28,44 @@ public class Test {
 
         user1.sendMessage(user2, "Hello, I am User1.");
         user1.sendMessage(user2, "How are you?");
+        System.out.println();
 
         user2.sendMessage(user1, "Hi, User1.");
         user2.sendMessage(user1, "I am User2. Nice to meet you.");
         user2.sendMessage(user1, "I am fine. And you?");
+        System.out.println();
 
         user3.sendMessage(user1, "Hey, I am User3.");
         user3.sendMessage(user1, "Do you remember me?");
         user3.sendMessage(user1, "We went to the same school.");
+        System.out.println();
 
         user1.sendMessage(user3, "Hey, User3. Of course I remember you!");
         user1.sendMessage(user3, "So nice to see  you again.");
         user1.sendMessage(user3, "Let's meet up. Are you free tomorrow?");
+        System.out.println();
 
         user3.sendMessage(user1, "Yes, I am free tomorrow. Let's go.");
+        System.out.println();
 
         MessageDatabase.showDialog(user1, user3);
 
         System.out.println();
 
         MessageDatabase.showDialog(user1, user2);
-
+        System.out.println();
 
         user1.subscribe(user3);  // подписка user1 на user3
-        user1.subscribe(user1);  // попытка подписки user1 на user1
+        user1.subscribe(user1);  // Вы не можете подписаться на самого себя
 
         System.out.println(user1.getSubscriptions());  // [User3]
-
         System.out.println(user1.isSubscribed(user2)); // false
         System.out.println(user1.isSubscribed(user3)); // true
 
+        System.out.println();
+
         user3.subscribe(user1);  // подписка user3 на user1
-        System.out.println(user3.getSubscriptions());  // [User2]
+        System.out.println(user3.getSubscriptions());  // [User1]
 
         System.out.println(user3.isFriend(user1)); // true, т.к. друзья
         System.out.println(user1.isFriend(user3)); // true, т.к. друзья

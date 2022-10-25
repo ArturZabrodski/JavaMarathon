@@ -8,8 +8,9 @@ import java.util.List;
  * Создать класс Музыкальная Группа (англ. MusicBand) с полями name и year
  * (название музыкальной группы и год основания). Создать 10 или более экземпляров
  * класса MusicBand , добавить их в список (выбирайте такие музыкальные группы,
- * которые были созданы как до 2000 года, так и после, жанр не важен). Перемешать
- * список. Создать статический метод в классе Task3:
+ * которые были созданы как до 2000 года, так и после, жанр не важен).
+ * Перемешать список.
+ * Создать статический метод в классе Task3:
  * public static List<MusicBand> groupsAfter2000(List<MusicBand> bands)
  * Этот метод принимает список групп в качестве аргумента и возвращает новый список,
  * состоящий из групп, основанных после 2000 года. Вызвать метод
@@ -20,37 +21,25 @@ import java.util.List;
 
 public class Task3 {
     public static void main(String[] args) {
-        MusicBand musicBand1 = new MusicBand("Depeche Mode", 1980);
-        MusicBand musicBand2 = new MusicBand("Queen ", 1970);
-        MusicBand musicBand3 = new MusicBand("The Smiths", 1982);
-        MusicBand musicBand4 = new MusicBand("Guns N' Roses", 1980);
-        MusicBand musicBand5 = new MusicBand("Sting", 1971);
-        MusicBand musicBand6 = new MusicBand("Nirvana", 1967);
-        MusicBand musicBand7 = new MusicBand("Bon Jovi", 1983);
-        MusicBand musicBand8 = new MusicBand("Arctic Monkeys", 2002);
-        MusicBand musicBand9 = new MusicBand("Fall Out Boy", 2001);
-        MusicBand musicBand10 = new MusicBand("OneRepublic", 2002);
-
         List<MusicBand> musicBandList = new ArrayList<>();
 
-        musicBandList.add(musicBand1);
-        musicBandList.add(musicBand2);
-        musicBandList.add(musicBand3);
-        musicBandList.add(musicBand4);
-        musicBandList.add(musicBand5);
-        musicBandList.add(musicBand6);
-        musicBandList.add(musicBand7);
-        musicBandList.add(musicBand8);
-        musicBandList.add(musicBand9);
-        musicBandList.add(musicBand10);
+        musicBandList.add(new MusicBand("Depeche Mode", 1980));
+        musicBandList.add(new MusicBand("Queen ", 1970));
+        musicBandList.add(new MusicBand("The Smiths", 1982));
+        musicBandList.add(new MusicBand("Guns N' Roses", 1980));
+        musicBandList.add(new MusicBand("Sting", 1971));
+        musicBandList.add(new MusicBand("Nirvana", 1967));
+        musicBandList.add(new MusicBand("Bon Jovi", 1983));
+        musicBandList.add(new MusicBand("Arctic Monkeys", 2002));
+        musicBandList.add(new MusicBand("Fall Out Boy", 2001));
+        musicBandList.add(new MusicBand("OneRepublic", 2002));
 
         System.out.println(musicBandList);
 
-        Collections.shuffle(musicBandList);
+        Collections.shuffle(musicBandList);  // перемешиваем список
+        System.out.println(musicBandList);
 
         List<MusicBand> musicBandList2 = groupsAfter2000(musicBandList);
-
-        System.out.println(musicBandList);
         System.out.println(musicBandList2);
     }
 

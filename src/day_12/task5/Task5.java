@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 5. *Выполнять в подпапке task5 в day12*
+ * 5. Выполнять в подпапке task5 в day12*
  * Скопировать MusicBand из прошлого задания и доработать - теперь у участника
  * музыкальной группы есть не только имя, но и возраст. Соответственно, теперь под
  * участником понимается не строка, а объект класса MusicArtist. Необходимо
@@ -34,17 +34,13 @@ public class Task5 {
         musicBand3.addMembers("CC", "AA", 43);
         musicBand3.addMembers("CCC", "AAA", 46);  // del
 
-        List<MusicBand> musicBandList = new ArrayList<>();
-
-        musicBandList.add(musicBand1);
-        musicBandList.add(musicBand2);
-        musicBandList.add(musicBand3);
-
         musicBand1.deleteMembers(0);
         musicBand2.deleteMembers(1);
         musicBand3.deleteMembers(2);
 
-        System.out.println(musicBandList);
+        System.out.println(musicBand1);
+        System.out.println(musicBand2);
+        System.out.println(musicBand3);
 
         System.out.println("___________________");
 

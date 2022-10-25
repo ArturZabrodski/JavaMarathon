@@ -37,10 +37,7 @@ public class MusicArtist {
 
     @Override
     public String toString() {
-        return "MusicArtist{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
+        return "MusicArtist{" + firstName + " " +
+                lastName + ", age=" + age + '}';
     }
 }

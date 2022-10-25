@@ -27,9 +27,6 @@ public class Members {
 
     @Override
     public String toString() {
-        return "Members{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return "{" + firstName + ", " + lastName + '}';
     }
 }
